@@ -112,9 +112,9 @@ var options = {
     publicDir  : path.join(__dirname, 'public')
   , viewsDir   : path.join(__dirname, 'views')
   , domain     : 'cdn.your-domain.com'
-  , bucket     : 'your-site'
-  , key        : 'AMAZON_S3_KEY'
-  , secret     : 'AMAZON_S3_SECRET'
+  , bucket     : 'bucket-name'
+  , key        : 'amazon-s3-key'
+  , secret     : 'amazon-s3-secret'
   , hostname   : 'localhost'
   , port       : 1337
   , ssl        : false
