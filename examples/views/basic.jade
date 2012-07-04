@@ -1,0 +1,20 @@
+!!! 5
+head
+  title express-cdn
+  != CDN('/css/style.css')
+  != CDN('/css/style.css')
+  != CDN('/css/style.css', { "data-main": 'Hello' })
+  != CDN(['/css/style.css', '/css/extra.css'])
+  != CDN(['/css/style.css', '/css/extra.css'], { "data-main": 'Goodbye' })
+  != CDN('/js/scripts.js')
+  != CDN('/js/scripts.js', { "data-main": 'Evening' })
+  != CDN(['/js/scripts.js', '/js/plugins.js' ])
+  != CDN(['/js/scripts.js', '/js/plugins.js' ], { "data-main": 'Yay' })
+body
+  h1 express-cdn
+  p
+    | Basic example (
+    a(href='view-source:http://localhost:1337') view source
+    | ).
+  != CDN('/img/box.png')
+  != CDN('/img/random.jpg')
