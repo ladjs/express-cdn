@@ -27,6 +27,7 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 ## Lazy Web Requests
 
 * Automatic parsing of `CDN(...)` in stylesheets and scripts.
+* Add tests for all asset types.
 * Modularization of `/lib/main.js` please!
 * Support Express 3.x.x+ and utilize async with view helper.
 * Convert from `fs.statSync` to `fs.stat` with callback for image assets modified timestamp hack.
