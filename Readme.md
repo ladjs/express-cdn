@@ -7,6 +7,8 @@ Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</
 
 Currently supports `express` version 2.x (not 3.x compatible yet).
 
+Like this module?  You should also check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
+
 ## Features
 
 * Built-in optimization of images in production mode using [OptiPNG][1] and [JPEGTran][2].
