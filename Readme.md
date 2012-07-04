@@ -122,7 +122,7 @@ var options = {
 };
 
 // Initialize the CDN magic
-var CDN = require('../')(app, options);
+var CDN = require('express-cdn')(app, options);
 
 app.configure(function() {
   app.set('view engine', 'jade');
