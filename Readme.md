@@ -1,5 +1,5 @@
 
-# express-cdn <sup style="font-size:10px !important;"></sup>
+<h1><a name="express-cdn" class="anchor" href="#express-cdn">express-cdn</a> <sup style="font-size:10px !important;">0.0.1</sup></h1>
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express using S3 and CloudFront.
 
