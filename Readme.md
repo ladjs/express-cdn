@@ -26,7 +26,7 @@ Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</
 
 * Automatic parsing of `CDN(...)` in stylesheets and scripts.
 * Support Express 3.x.x+ and utilize async with view helper.
-* Convert to `fs.statSync` to `fs.stat` with callback for image assets modified timestamp hack.
+* Convert from `fs.statSync` to `fs.stat` with callback for image assets modified timestamp hack.
 * Investigate why Chrome Tools Audit returns leverage proxy cookieless jargon.
 
 
