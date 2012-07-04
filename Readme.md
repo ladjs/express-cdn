@@ -5,7 +5,7 @@ Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hos
 
 Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</a> on Twitter for updates.
 
-
+Currently supports `express` version 2.x (not 3.x compatible yet).
 
 ## Features
 
