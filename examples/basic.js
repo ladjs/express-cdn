@@ -3,7 +3,6 @@
 
 var express = require('express')
   , path    = require('path')
-  , url     = require('url')
   , app     = express.createServer();
 
 // Set the CDN options
