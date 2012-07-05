@@ -11,10 +11,10 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 
 ## Add-on Modules (coming soon)
 
-* [express-cdn-cloudfront][11] - Amazon S3 and Amazon CloudFront
-* [express-cdn-maxcdn][12] - MaxCDN and Amazon S3
-* [express-cdn-cloudfiles][13] - Rackspace CloudFiles
-* [express-cdn-cloudflare][14] - CloudFlare and Amazon S3
+* [express-cdn-cloudfront][12] - Amazon S3 and Amazon CloudFront
+* [express-cdn-maxcdn][13] - MaxCDN and Amazon S3
+* [express-cdn-cloudfiles][14] - Rackspace CloudFiles
+* [express-cdn-cloudflare][15] - CloudFlare and Amazon S3
 
 ## Features
 
@@ -307,7 +307,8 @@ MIT Licensed
 [8]: http://h5bp.com/
 [9]: http://nodejs.org/api/zlib.html
 [10]: https://github.com/LearnBoost/knox/
-[11]: https://github.com/niftylettuce/express-cdn-cloudfront
-[12]: https://github.com/niftylettuce/express-cdn-maxcdn
-[13]: https://github.com/niftylettuce/express-cdn-cloudfiles
-[14]: https://github.com/niftylettuce/express-cdn-cloudflare
+
+[12]: https://github.com/niftylettuce/express-cdn-cloudfront
+[13]: https://github.com/niftylettuce/express-cdn-maxcdn
+[14]: https://github.com/niftylettuce/express-cdn-cloudfiles
+[15]: https://github.com/niftylettuce/express-cdn-cloudflare
