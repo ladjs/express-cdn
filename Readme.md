@@ -12,6 +12,7 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 ## README Contents
 
 - [Features](#features)
+- [Add-On Modules](#addon)
 - [Lazy Web Requests](#requests)
 - [How Does It Work?](#how)
 - [Environment Differences](#environment)
@@ -37,6 +38,13 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 * Combine commonly used assets together using a simple array argument.
 * Uploads changed assets automatically and asynchronously to Amazon S3 (only in production mode) using [knox][10].
 
+<a name="addon">
+## Add-on Modules (coming soon)
+
+* [express-cdn-cloudfront][11] - Amazon S3 and Amazon CloudFront
+* [express-cdn-maxcdn][12] - MaxCDN and Amazon S3
+* [express-cdn-cloudfiles][13] - Rackspace CloudFiles
+* [express-cdn-cloudflare][14] - CloudFlare and Amazon S3
 
 <a name="requests">
 ## Lazy Web Requests
