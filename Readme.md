@@ -1,5 +1,5 @@
 
-# express-cdn <sup>0.0.1</sup>
+# express-cdn <sup>0.0.3</sup>
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express using S3 and CloudFront.
 
@@ -279,6 +279,8 @@ timestamps together and checks if the combined asset timestamp on S3 exists!).
 ## Contributors
 
 * Nick Baugh <niftylettuce@gmail.com>
+* James Wyse <james@jameswyse.net>
+* Jon Keating <jon@licq.org>
 
 
 
