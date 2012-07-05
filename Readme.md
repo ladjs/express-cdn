@@ -9,6 +9,7 @@ Currently supports `express` version 2.x (not 3.x compatible yet).
 
 Like this module?  You should also check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
 
+<<<<<<< HEAD
 ## Add-on Modules (coming soon)
 
 * [express-cdn-cloudfront][12] - Amazon S3 and Amazon CloudFront
@@ -16,6 +17,24 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 * [express-cdn-cloudfiles][14] - Rackspace CloudFiles
 * [express-cdn-cloudflare][15] - CloudFlare and Amazon S3
 
+=======
+## README Contents
+
+- [Features](#features)
+- [Add-On Modules](#addon)
+- [Lazy Web Requests](#requests)
+- [How Does It Work?](#how)
+- [Environment Differences](#environment)
+- [CDN Setup Instructions](#cdn-setup)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Optional Features](#optional)
+  - [Using A Custom Logger](#optional-logger)
+- [Contributors](#contributors)
+- [License](#license)
+
+<a name="features">
+>>>>>>> 084d5ce66f715fd47423fa3e5ec38c3b13ecbec0
 ## Features
 
 * Built-in optimization of images in production mode using [OptiPNG][1] and [JPEGTran][2].
@@ -29,8 +48,15 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 * Combine commonly used assets together using a simple array argument.
 * Uploads changed assets automatically and asynchronously to Amazon S3 (only in production mode) using [knox][10].
 
+<a name="addon">
+## Add-on Modules (coming soon)
 
+* [express-cdn-cloudfront][13] - Amazon S3 and Amazon CloudFront
+* [express-cdn-maxcdn][14] - MaxCDN and Amazon S3
+* [express-cdn-cloudfiles][15] - Rackspace CloudFiles
+* [express-cdn-cloudflare][16] - CloudFlare and Amazon S3
 
+<a name="requests">
 ## Lazy Web Requests
 
 * Automatic parsing of `CDN(...)` in stylesheets and scripts.
@@ -42,7 +68,7 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 * Investigate why Chrome Tools Audit returns leverage proxy cookieless jargon.
 
 
-
+<a name="how">
 ## How does it work?
 
 When the server is first started, the module returns a view helper depending on
@@ -52,8 +78,7 @@ searches through your `viewsDir` for any views containing instances of the
 it will use your S3 credentials to upload a new copy of the production-quality
 assets.  Enjoy **:)**.
 
-
-
+<a name="environment">
 ## Environment Differences
 
 **Development Mode:**
@@ -65,7 +90,7 @@ Assets are untouched, cachebusted, and delivered as typical local files for rapi
 Assets are optimized, minified, mangled, gzipped, delivered by Amazon CloudFront CDN, and hosted from Amazon S3.
 
 
-
+<a name="cdn-setup">
 ## CDN Setup Instructions
 
 1. Visit <https://console.aws.amazon.com/s3/home> and click **Create Bucket**.
@@ -94,19 +119,29 @@ Assets are optimized, minified, mangled, gzipped, delivered by Amazon CloudFront
 7. After the DNS change propagates, you can test your new CDN by visiting <http://cdn.your-domain.com> (the `index.html` file should get displayed).
 
 
-
+<a name="installation">
 ## Installation
 
+### Install Dependencies
+
+##### Linux
 ```bash
 # install optipng and jpegtran packages
 sudo apt-get install optipng libjpeg-progs
+```
 
-# install express-cdn module
+##### OS X (with [Homebrew][11])
+```bash
+# install optipng and jpegtran packages
+brew install optipng libjpeg
+```
+
+### Install express-cdn module
+```bash
 npm install express-cdn
 ```
 
-
-
+<a name="usage">
 ## Usage
 
 ### Server
@@ -280,9 +315,52 @@ timestamps together and checks if the combined asset timestamp on S3 exists!).
 <!-- #8 - Load and concat two stylesheets -->
 <link href="https://cdn.your-site.com/style%2Bextra.1341382571.css" rel="stylesheet" type="text/css" />
 ```
+<a name="optional">
+## Optional Features
+<a name="optional-logger">
+### Using a custom logger
 
+By default log messages will be sent to the console. If you would like to use a custom logger function you may pass it in as `options.logger`
 
+The example below uses the [Winston][12] logging library.
 
+```javascript
+var winston = require('winston');
+winston.add(winston.transports.File, {filename: 'somefile.log'});
+
+// Set the CDN options
+var options = {
+    publicDir  : path.join(__dirname, 'public')
+  , viewsDir   : path.join(__dirname, 'views')
+  , domain     : 'cdn.your-domain.com'
+  , bucket     : 'bucket-name'
+  , key        : 'amazon-s3-key'
+  , secret     : 'amazon-s3-secret'
+  , hostname   : 'localhost'
+  , port       : 1337
+  , ssl        : false
+  , production : true
+  , logger     : winston.info
+};
+
+// Initialize the CDN magic
+var CDN = require('express-cdn')(app, options);
+
+app.configure(function() {
+  app.set('view engine', 'jade');
+  app.set('view options', { layout: false, pretty: true });
+  app.enable('view cache');
+  app.use(express.bodyParser());
+  app.use(express.static(path.join(__dirname, 'public')));
+});
+
+// Add the dynamic view helper
+app.dynamicHelpers({ CDN: CDN });
+
+```
+Any output from express-cdn is now passed to `winston.info()` which writes to both `console` and `somefile.log`.
+
+<a name="contributors">
 ## Contributors
 
 * Nick Baugh <niftylettuce@gmail.com>
@@ -290,7 +368,7 @@ timestamps together and checks if the combined asset timestamp on S3 exists!).
 * Jon Keating <jon@licq.org>
 
 
-
+<a name="license">
 ## License
 
 MIT Licensed
@@ -307,8 +385,9 @@ MIT Licensed
 [8]: http://h5bp.com/
 [9]: http://nodejs.org/api/zlib.html
 [10]: https://github.com/LearnBoost/knox/
-
-[12]: https://github.com/niftylettuce/express-cdn-cloudfront
-[13]: https://github.com/niftylettuce/express-cdn-maxcdn
-[14]: https://github.com/niftylettuce/express-cdn-cloudfiles
-[15]: https://github.com/niftylettuce/express-cdn-cloudflare
+[11]: https://github.com/mxcl/homebrew/
+[12]: https://github.com/flatiron/winston/
+[13]: https://github.com/niftylettuce/express-cdn-cloudfront
+[14]: https://github.com/niftylettuce/express-cdn-maxcdn
+[15]: https://github.com/niftylettuce/express-cdn-cloudfiles
+[16]: https://github.com/niftylettuce/express-cdn-cloudflare
