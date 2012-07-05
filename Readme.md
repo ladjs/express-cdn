@@ -10,14 +10,6 @@ Currently supports `express` version 2.x (not 3.x compatible yet).
 Like this module?  You should also check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
 
 
-## Add-on Modules (coming soon)
-
-* [express-cdn-cloudfront][13] - Amazon S3 and Amazon CloudFront
-* [express-cdn-maxcdn][14] - MaxCDN and Amazon S3
-* [express-cdn-cloudfiles][15] - Rackspace CloudFiles
-* [express-cdn-cloudflare][16] - CloudFlare and Amazon S3
-
-
 ## README Contents
 
 - [Features](#features)
@@ -32,6 +24,7 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
   - [Using A Custom Logger](#optional-logger)
 - [Contributors](#contributors)
 - [License](#license)
+
 
 <a name="features">
 ## Features
