@@ -9,7 +9,7 @@ Currently supports `express` version 2.x (not 3.x compatible yet).
 
 Like this module?  You should also check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
 
-<<<<<<< HEAD
+
 ## Add-on Modules (coming soon)
 
 * [express-cdn-cloudfront][12] - Amazon S3 and Amazon CloudFront
@@ -17,7 +17,7 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 * [express-cdn-cloudfiles][14] - Rackspace CloudFiles
 * [express-cdn-cloudflare][15] - CloudFlare and Amazon S3
 
-=======
+
 ## README Contents
 
 - [Features](#features)
@@ -34,7 +34,6 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 - [License](#license)
 
 <a name="features">
->>>>>>> 084d5ce66f715fd47423fa3e5ec38c3b13ecbec0
 ## Features
 
 * Built-in optimization of images in production mode using [OptiPNG][1] and [JPEGTran][2].
