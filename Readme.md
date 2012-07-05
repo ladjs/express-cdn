@@ -12,10 +12,10 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 
 ## Add-on Modules (coming soon)
 
-* [express-cdn-cloudfront][12] - Amazon S3 and Amazon CloudFront
-* [express-cdn-maxcdn][13] - MaxCDN and Amazon S3
-* [express-cdn-cloudfiles][14] - Rackspace CloudFiles
-* [express-cdn-cloudflare][15] - CloudFlare and Amazon S3
+* [express-cdn-cloudfront][13] - Amazon S3 and Amazon CloudFront
+* [express-cdn-maxcdn][14] - MaxCDN and Amazon S3
+* [express-cdn-cloudfiles][15] - Rackspace CloudFiles
+* [express-cdn-cloudflare][16] - CloudFlare and Amazon S3
 
 
 ## README Contents
