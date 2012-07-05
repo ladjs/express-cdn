@@ -1,13 +1,20 @@
 
 # express-cdn <sup>0.0.3</sup>
 
-Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express using S3 and CloudFront.
+Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
 Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</a> on Twitter for updates.
 
 Currently supports `express` version 2.x (not 3.x compatible yet).
 
 Like this module?  You should also check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
+
+## Add-on Modules (coming soon)
+
+* [express-cdn-cloudfront][11] - Amazon S3 and Amazon CloudFront
+* [express-cdn-maxcdn][12] - MaxCDN and Amazon S3
+* [express-cdn-cloudfiles][13] - Rackspace CloudFiles
+* [express-cdn-cloudflare][14] - CloudFlare and Amazon S3
 
 ## Features
 
@@ -300,3 +307,7 @@ MIT Licensed
 [8]: http://h5bp.com/
 [9]: http://nodejs.org/api/zlib.html
 [10]: https://github.com/LearnBoost/knox/
+[11]: https://github.com/niftylettuce/express-cdn-cloudfront
+[12]: https://github.com/niftylettuce/express-cdn-maxcdn
+[13]: https://github.com/niftylettuce/express-cdn-cloudfiles
+[14]: https://github.com/niftylettuce/express-cdn-cloudflare
