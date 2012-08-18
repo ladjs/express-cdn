@@ -52,12 +52,14 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 ## Lazy Web Requests
 
 * Automatic parsing of `CDN(...)` in stylesheets and scripts.
+
 ```less
 // Here is a LESS mixin which could then get parsed in CSS for /CDN/ and uploaded to storage/CDN
 .CDN (@image: '/path/to/cdn.png') {
   background-image: url("/CDN/@{image}");
 }
 ```
+
 * Add options to pick CDN network (e.g. MaxCDN vs. Amazon vs. Rackspace)
 * Add tests for all asset types.
 * Modularization of `/lib/main.js` please!
