@@ -56,7 +56,7 @@ Like this module?  You should also check out <a href="https://github.com/niftyle
 ```less
 // Here is a LESS mixin which could then get parsed in CSS for /CDN/ and uploaded to storage/CDN
 .CDN (@image: '/path/to/cdn.png') {
-  background-image: url("/CDN/@{image}");
+  background-image: url("@{image}?mixin=CDN");
 }
 ```
 
