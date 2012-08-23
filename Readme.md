@@ -1,5 +1,7 @@
 
-# express-cdn <sup>0.0.3</sup>
+# express-cdn <sup>0.0.4</sup>
+
+Now supports all versions of Express `2.x.x` and `3.x.x`.
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
