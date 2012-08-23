@@ -1,12 +1,13 @@
 {
     "name": "express-cdn"
   , "description": "Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express using S3 and CloudFront."
-  , "version": "0.0.3"
+  , "version": "0.0.4"
   , "author": "Nick Baugh <niftylettuce@gmail.com>"
   , "contributors": [
       { "name": "Nick Baugh", "email": "niftylettuce@gmail.com" },
       { "name": "James Wyse", "email": "james@jameswyse.net" },
-      { "name": "Jon Keating", "email": "jon@licq.org" }
+      { "name": "Jon Keating", "email": "jon@licq.org" },
+      { "name": "Andrew de Andrade", "email": "andrew@deandrade.com.br" }
     ]
   , "keywords": [ "express-cdn", "cdn", "assets", "cloudfront", "s3", "amazon", "minify", "mangle", "obfuscate", "optipng", "jpegtran", "optimize", "gzip", "zlib", "uglify", "express" ]
   , "homepage": "https://github.com/niftylettuce/express-cdn"
