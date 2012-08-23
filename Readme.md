@@ -151,7 +151,8 @@ npm install express-cdn
 
 var express = require('express')
   , path    = require('path')
-  , app     = express.createServer();
+  , app     = express.createServer()
+  , semver  = require('semver');
 
 // Set the CDN options
 var options = {
@@ -178,8 +179,12 @@ app.configure(function() {
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
-// Add the dynamic view helper
-app.dynamicHelpers({ CDN: CDN });
+// Add the view helper
+if (semver.lt(express.version, '3.0.0')) {
+  app.locals({ CDN: CDN() });
+} else {
+  app.dynamicHelpers({ CDN: CDN });
+}
 
 app.get('/', function(req, res, next) {
   res.render('basic');
