@@ -373,6 +373,7 @@ Any output from express-cdn is now passed to `winston.info()` which writes to bo
 * Nick Baugh <niftylettuce@gmail.com>
 * James Wyse <james@jameswyse.net>
 * Jon Keating <jon@licq.org>
+* <a href="http://www.joshisgross.com" target="_blank">Joshua Gross</a> <josh@spandex.io>
 
 
 <a name="license">
