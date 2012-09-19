@@ -1,16 +1,15 @@
 
-# express-cdn <sup>0.0.4</sup>
+# express-cdn <sup>0.0.5</sup>
 
-Now supports all versions of Express `2.x.x` and `3.x.x`.
+**NOTE**: `0.0.5` patches CSS single file in production mode
+
+Express `2.x.x` and `3.x.x` compatible.
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
 Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</a> on Twitter for updates.
 
-Currently supports `express` version 2.x (not 3.x compatible yet).
-
-Like this module?  You should also check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
-
+Like this module?  Check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
 
 ## README Contents
 
