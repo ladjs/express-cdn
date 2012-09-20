@@ -1,7 +1,7 @@
 
 # express-cdn <sup>0.0.6</sup>
 
-**NOTE**: `0.0.5` patches CSS single file in production mode and `0.0.6` adds temporary support for CSS usage of `background-image`, `background`, and `contents` attributes (the image paths must be absolute -- e.g. use <s>"../whatever.png"</s> "/whatever.png").
+**NOTE**: `0.0.5` patches CSS single file in production mode and `0.0.6` adds temporary support for CSS usage of `background-image`, `background`, and `contents` attributes (the image paths must be absolute -- e.g. don't use `url: ("../whatever.png")`, instead use: `url: ("/whatever.png")`).
 
 Express `2.x.x` and `3.x.x` compatible.
 
