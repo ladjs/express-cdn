@@ -1,5 +1,5 @@
 
-# express-cdn <sup>0.0.5</sup>
+# express-cdn <sup>0.0.6</sup>
 
 **NOTE**: `0.0.5` patches CSS single file in production mode and `0.0.6` adds temporary support for CSS usage of `background-image`, `background`, and `contents` attributes (the image paths must be absolute -- e.g. use <s>"../whatever.png"</s> "/whatever.png").
 
@@ -30,6 +30,7 @@ Like this module?  Check out <a href="https://github.com/niftylettuce/node-email
 <a name="features">
 ## Features
 
+* Automatic parsing of `background`, `background-image` and `content` for `url({{absoluteUrl}})` in stylesheets and scripts.
 * Built-in optimization of images in production mode using [OptiPNG][1] and [JPEGTran][2].
 * Supports [Sass][3], [LESS][4], and [Stylus][5] using respective stylesheet compilers.
 * JavaScript assets are mangled and minified using [UglifyJS][6].
@@ -51,15 +52,6 @@ Like this module?  Check out <a href="https://github.com/niftylettuce/node-email
 
 <a name="requests">
 ## Lazy Web Requests
-
-* Automatic parsing of `CDN(...)` in stylesheets and scripts.
-
-```less
-// Here is a LESS mixin which could then get parsed in CSS for /CDN/ and uploaded to storage/CDN
-.CDN (@image: '/path/to/cdn.png') {
-  background-image: url("@{image}?mixin=CDN");
-}
-```
 
 * Add options to pick CDN network (e.g. MaxCDN vs. Amazon vs. Rackspace)
 * Add tests for all asset types.
