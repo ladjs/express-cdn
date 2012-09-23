@@ -1,7 +1,7 @@
 
 # express-cdn <sup>0.0.7</sup>
 
-**NOTE**: `0.0.7` removes CSS minification because `clean-css` module has conflicts with resulting CSS not getting process properly (e.g. it over-optimizes and removes things that were needed)
+**NOTE**: `0.0.7` removes CSS minification because `clean-css` module has conflicts with resulting CSS not getting processed properly (e.g. it over-optimizes and removes things that were needed)
 
 **NOTE**: `0.0.5` patches CSS single file in production mode and `0.0.6` adds temporary support for CSS usage of `background-image`, `background`, and `contents` attributes (the image paths must be absolute -- e.g. don't use `url: ("../whatever.png")`, instead use: `url: ("/whatever.png")`).
 
