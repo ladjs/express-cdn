@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/niftylettuce/express-cdn.png)](http://travis-ci.org/niftylettuce/express-cdn)
 
 # express-cdn <sup>0.0.8</sup>
 
