@@ -1,11 +1,5 @@
 
-# express-cdn <sup>0.0.7</sup>
-
-**NOTE**: `0.0.7` removes CSS minification because `clean-css` module has conflicts with resulting CSS not getting processed properly (e.g. it over-optimizes and removes things that were needed)
-
-**NOTE**: `0.0.5` patches CSS single file in production mode and `0.0.6` adds temporary support for CSS usage of `background-image`, `background`, and `contents` attributes (the image paths must be absolute -- e.g. don't use `url: ("../whatever.png")`, instead use: `url: ("/whatever.png")`).
-
-Express `2.x.x` and `3.x.x` compatible.
+# express-cdn <sup>0.0.8</sup>
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
@@ -13,8 +7,11 @@ Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</
 
 Like this module?  Check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
 
-## README Contents
 
+## Index
+
+- [Compatibility](#compatibility)
+- [Changelog](#changelog)
 - [Features](#features)
 - [Add-On Modules](#addon)
 - [Lazy Web Requests](#requests)
@@ -29,7 +26,40 @@ Like this module?  Check out <a href="https://github.com/niftylettuce/node-email
 - [License](#license)
 
 
-<a name="features">
+## Compatibility
+
+This module is compatible with Express versions `2.x.x` and `3.x.x`.
+
+
+## Changelog
+
+* `0.0.8`: Enabled string-only output for CDN assets.
+
+**Example**:
+```jade
+- var href = CDN('/img/full/foo.jpg', { raw : true });
+a(class="fancybox", href="#{href}")
+  != CDN('/img/small/foo.jpg', { alt : 'Foo', width : 800, height : 600 })
+```
+
+* `0.0.7`: Removed CSS minification due to over-optimization of the `clean-css` module.
+
+* `0.0.6`: Added temporary support for CSS usage of `background-image`, `background`, and `contents` attributes by absolute image paths.
+
+**Example**:
+```css
+/* Valid - Proper way to write CSS with express-cdn */
+#example-valid {
+  background: url(/something.png);
+}
+
+/* Invalid - Don't do this! */
+#example-invalid {
+  background: url(../something.png);
+}
+```
+
+
 ## Features
 
 * Automatic parsing of `background`, `background-image` and `content` for `url({{absoluteUrl}})` in stylesheets and scripts.
@@ -44,7 +74,7 @@ Like this module?  Check out <a href="https://github.com/niftylettuce/node-email
 * Combine commonly used assets together using a simple array argument.
 * Uploads changed assets automatically and asynchronously to Amazon S3 (only in production mode) using [knox][10].
 
-<a name="addon">
+
 ## Add-on Modules (coming soon)
 
 * [express-cdn-cloudfront][13] - Amazon S3 and Amazon CloudFront
@@ -52,7 +82,6 @@ Like this module?  Check out <a href="https://github.com/niftylettuce/node-email
 * [express-cdn-cloudfiles][15] - Rackspace CloudFiles
 * [express-cdn-cloudflare][16] - CloudFlare and Amazon S3
 
-<a name="requests">
 ## Lazy Web Requests
 
 * Add options to pick CDN network (e.g. MaxCDN vs. Amazon vs. Rackspace)
@@ -63,7 +92,6 @@ Like this module?  Check out <a href="https://github.com/niftylettuce/node-email
 * Investigate why Chrome Tools Audit returns leverage proxy cookieless jargon.
 
 
-<a name="how">
 ## How does it work?
 
 When the server is first started, the module returns a view helper depending on
@@ -73,7 +101,7 @@ searches through your `viewsDir` for any views containing instances of the
 it will use your S3 credentials to upload a new copy of the production-quality
 assets.  Enjoy **:)**.
 
-<a name="environment">
+
 ## Environment Differences
 
 **Development Mode:**
@@ -85,7 +113,6 @@ Assets are untouched, cachebusted, and delivered as typical local files for rapi
 Assets are optimized, minified, mangled, gzipped, delivered by Amazon CloudFront CDN, and hosted from Amazon S3.
 
 
-<a name="cdn-setup">
 ## CDN Setup Instructions
 
 1. Visit <https://console.aws.amazon.com/s3/home> and click **Create Bucket**.
@@ -114,7 +141,6 @@ Assets are optimized, minified, mangled, gzipped, delivered by Amazon CloudFront
 7. After the DNS change propagates, you can test your new CDN by visiting <http://cdn.your-domain.com> (the `index.html` file should get displayed).
 
 
-<a name="installation">
 ## Installation
 
 ### Install Dependencies
@@ -136,7 +162,6 @@ brew install optipng libjpeg
 npm install express-cdn
 ```
 
-<a name="usage">
 ## Usage
 
 ### Server
@@ -315,9 +340,10 @@ timestamps together and checks if the combined asset timestamp on S3 exists!).
 <!-- #8 - Load and concat two stylesheets -->
 <link href="https://cdn.your-site.com/style%2Bextra.1341382571.css" rel="stylesheet" type="text/css" />
 ```
-<a name="optional">
+
+
 ## Optional Features
-<a name="optional-logger">
+
 ### Using a custom logger
 
 By default log messages will be sent to the console. If you would like to use a custom logger function you may pass it in as `options.logger`
@@ -360,21 +386,20 @@ app.dynamicHelpers({ CDN: CDN });
 ```
 Any output from express-cdn is now passed to `winston.info()` which writes to both `console` and `somefile.log`.
 
-<a name="contributors">
+
 ## Contributors
 
 * Nick Baugh <niftylettuce@gmail.com>
 * James Wyse <james@jameswyse.net>
 * Jon Keating <jon@licq.org>
+* Andrew de Andrade <andrew@deandrade.com.br>
 * <a href="http://www.joshisgross.com" target="_blank">Joshua Gross</a> <josh@spandex.io>
+* Dominik Lessel <info@rocketeleven.com>
 
 
-<a name="license">
 ## License
 
 MIT Licensed
-
-
 
 [1]: http://optipng.sourceforge.net/
 [2]: http://jpegclub.org/jpegtran/
