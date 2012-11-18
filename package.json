@@ -4,13 +4,13 @@
   , "version": "0.0.9"
   , "author": "Nick Baugh <niftylettuce@gmail.com>"
   , "contributors": [
-      { "name": "Nick Baugh", "email": "niftylettuce@gmail.com" },
-      { "name": "James Wyse", "email": "james@jameswyse.net" },
-      { "name": "Jon Keating", "email": "jon@licq.org" },
-      { "name": "Andrew de Andrade", "email": "andrew@deandrade.com.br" },
-      { "name": "Joshua Gross", "email": "josh@spandex.io" },
-      { "name": "Dominik Lessel", "email": "info@rocketeleven.com" }
-      { "name": "Elad Ben-Israel", "email": "elad.benisrael@gmail.com" }
+        { "name": "Nick Baugh", "email": "niftylettuce@gmail.com" }
+      , { "name": "James Wyse", "email": "james@jameswyse.net" }
+      , { "name": "Jon Keating", "email": "jon@licq.org" }
+      , { "name": "Andrew de Andrade", "email": "andrew@deandrade.com.br" }
+      , { "name": "Joshua Gross", "email": "josh@spandex.io" }
+      , { "name": "Dominik Lessel", "email": "info@rocketeleven.com" }
+      , { "name": "Elad Ben-Israel", "email": "elad.benisrael@gmail.com" }
     ]
   , "keywords": [ "express-cdn", "cdn", "assets", "cloudfront", "s3", "amazon", "minify", "mangle", "obfuscate", "optipng", "jpegtran", "optimize", "gzip", "zlib", "uglify", "express" ]
   , "homepage": "https://github.com/niftylettuce/express-cdn"

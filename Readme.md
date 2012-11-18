@@ -399,7 +399,7 @@ Any output from express-cdn is now passed to `winston.info()` which writes to bo
 * Andrew de Andrade <andrew@deandrade.com.br>
 * <a href="http://www.joshisgross.com" target="_blank">Joshua Gross</a> <josh@spandex.io>
 * Dominik Lessel <info@rocketeleven.com>
-
+* Elad Ben-Israel <elad.benisrael@gmail.com>
 
 ## License
 
