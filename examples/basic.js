@@ -11,6 +11,7 @@ var options = {
   , viewsDir   : path.join(__dirname, 'views')
   , domain     : 'cdn.your-domain.com'
   , bucket     : 'bucket-name'
+  , endpoint   : 'bucket-name.s3-eu-west-1.amazonaws.com' // optional
   , key        : 'amazon-s3-key'
   , secret     : 'amazon-s3-secret'
   , hostname   : 'localhost'
