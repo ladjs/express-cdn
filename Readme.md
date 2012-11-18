@@ -1,5 +1,5 @@
 
-# express-cdn <sup>0.0.8</sup>
+# express-cdn <sup>0.0.9</sup>
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
@@ -32,6 +32,8 @@ This module is compatible with Express versions `2.x.x` and `3.x.x`.
 
 
 ## Changelog
+
+* `0.0.9`: Allowed explicit setting of S3 endpoint (by @eladb)
 
 * `0.0.8`: Enabled string-only output for CDN assets.
 
