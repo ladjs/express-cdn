@@ -3,6 +3,8 @@
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
+**UPDATE**: [Teelaunch](https://github.com/teelaunch) plans to rewrite this module, subscribe to their [email newsletter](http://goo.gl/j0ypI) for special updates.
+
 Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</a> on Twitter for updates.
 
 Like this module?  Check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
