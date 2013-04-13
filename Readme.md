@@ -185,7 +185,10 @@ var options = {
   , viewsDir   : path.join(__dirname, 'views')
   , domain     : 'cdn.your-domain.com'
   , bucket     : 'bucket-name'
-  , endpoint   : 'bucket-name.s3-eu-west-1.amazonaws.com' // optional
+    // required per `knox` standards using `this.endpoint`
+    // for list of available endpoints visit:
+    // <http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints>
+  , endpoint   : 'bucket-name.s3-eu-west-1.amazonaws.com'
   , key        : 'amazon-s3-key'
   , secret     : 'amazon-s3-secret'
   , hostname   : 'localhost'
