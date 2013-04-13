@@ -78,9 +78,9 @@
     "underscore": "1.3.3",
     "underscore.string": "2.2.0rc",
     "walk": "2.2.1",
-    "knox": "https://github.com/niftylettuce/knox/tarball/master",
+    "knox": "*",
     "async": "0.1.22",
-    "request": "2.9.203",
+    "request": "*",
     "uglify-js": "1.3.2",
     "optipng-bin": "~0.2.3",
     "jpegtran-bin": "~0.1.4"
