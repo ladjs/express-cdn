@@ -1,5 +1,5 @@
 
-# express-cdn <sup>[![Version Badge](http://vb.teelaun.ch/niftylettuce/express-cdn.svg)](https://npmjs.org/package/express-cdn)</sup>
+# express-cdn <sup>[![Version Badge](http://vb.teelaun.ch/niftylettuce/express-cdn.svg#0.1.0)](https://npmjs.org/package/express-cdn)</sup>
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
