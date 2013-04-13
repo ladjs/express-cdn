@@ -3,8 +3,6 @@
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
-**UPDATE**: [Teelaunch](https://github.com/teelaunch) plans to rewrite this module, subscribe to their [email newsletter](http://goo.gl/j0ypI) for special updates.
-
 Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</a> on Twitter for updates.
 
 Like this module?  Check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
@@ -34,6 +32,8 @@ This module is compatible with Express versions `2.x.x` and `3.x.x`.
 
 
 ## Changelog
+
+* `0.1.0`: Fixed endpoint issue, fixed knox issue, added optipng binary, added jpegtran binary, **no longer requires optipng or jpegtran server dependencies!**
 
 * `0.0.9`: Allowed explicit setting of S3 endpoint (by @eladb)
 
@@ -148,20 +148,6 @@ Assets are optimized, minified, mangled, gzipped, delivered by Amazon CloudFront
 
 ## Installation
 
-### Install Dependencies
-
-##### Linux
-```bash
-# install optipng and jpegtran packages
-sudo apt-get install optipng libjpeg-progs
-```
-
-##### OS X (with [Homebrew][11])
-```bash
-# install optipng and jpegtran packages
-brew install optipng libjpeg
-```
-
 ### Install express-cdn module
 ```bash
 npm install express-cdn
@@ -179,21 +165,20 @@ var express = require('express')
   , app     = express.createServer()
   , semver  = require('semver');
 
+var sslEnabled = false
+
 // Set the CDN options
 var options = {
     publicDir  : path.join(__dirname, 'public')
   , viewsDir   : path.join(__dirname, 'views')
   , domain     : 'cdn.your-domain.com'
   , bucket     : 'bucket-name'
-    // required per `knox` standards using `this.endpoint`
-    // for list of available endpoints visit:
-    // <http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints>
-  , endpoint   : 'bucket-name.s3-eu-west-1.amazonaws.com'
+  , endpoint   : 'bucket-name.s3.amazonaws.com' // optional
   , key        : 'amazon-s3-key'
   , secret     : 'amazon-s3-secret'
   , hostname   : 'localhost'
-  , port       : 1337
-  , ssl        : false
+  , port       : (sslEnabled ? 443 : 1337)
+  , ssl        : sslEnabled
   , production : true
 };
 
