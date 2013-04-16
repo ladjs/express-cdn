@@ -3,71 +3,30 @@
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
-Follow <a href="http://twitter.com/niftylettuce" target="_blank">@niftylettuce</a> on Twitter for updates.
+Follow [@niftylettuce](http://twitter.com/niftylettuce) on Twitter for updates.
 
-Like this module?  Check out <a href="https://github.com/niftylettuce/node-email-templates" target="_blank">node-email-templates</a>!
+Like this module?  Check out [node-email-templates](https://github.com/niftylettuce/node-email-templates)!
 
 
 ## Index
 
-- [Compatibility](#compatibility)
-- [Changelog](#changelog)
 - [Features](#features)
-- [Add-On Modules](#addon)
-- [Lazy Web Requests](#requests)
-- [How Does It Work?](#how)
-- [Environment Differences](#environment)
-- [CDN Setup Instructions](#cdn-setup)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Optional Features](#optional)
-  - [Using A Custom Logger](#optional-logger)
+- [Add-On Modules](#add-on-modules)
+- [How Does It Work?](#how-does-it-work)
+- [Environment Differences](#environment-differences)
+- [CDN Setup Instructions](#cdn-setup-instructions)
+- [Quick Start](#quick-start)
+- [Custom Logging](#custom-logging)
+- [Lazyweb Requests](#lazyweb-requests)
+- [Changelog](#changelog)
 - [Contributors](#contributors)
 - [License](#license)
-
-
-## Compatibility
-
-This module is compatible with Express versions `2.x.x` and `3.x.x`.
-
-
-## Changelog
-
-* `0.1.0`: Fixed endpoint issue, fixed knox issue, added optipng binary, added jpegtran binary, **no longer requires optipng or jpegtran server dependencies!**
-
-* `0.0.9`: Allowed explicit setting of S3 endpoint (by @eladb)
-
-* `0.0.8`: Enabled string-only output for CDN assets.
-
-**Example**:
-```jade
-- var href = CDN('/img/full/foo.jpg', { raw : true });
-a(class="fancybox", href="#{href}")
-  != CDN('/img/small/foo.jpg', { alt : 'Foo', width : 800, height : 600 })
-```
-
-* `0.0.7`: Removed CSS minification due to over-optimization of the `clean-css` module.
-
-* `0.0.6`: Added temporary support for CSS usage of `background-image`, `background`, and `contents` attributes by absolute image paths.
-
-**Example**:
-```css
-/* Valid - Proper way to write CSS with express-cdn */
-#example-valid {
-  background: url(/something.png);
-}
-
-/* Invalid - Don't do this! */
-#example-invalid {
-  background: url(../something.png);
-}
-```
 
 
 ## Features
 
 * Automatic parsing of `background`, `background-image` and `content` for `url({{absoluteUrl}})` in stylesheets and scripts.
-* Built-in optimization of images in production mode using [OptiPNG][1] and [JPEGTran][2].
+* Built-in optimization of images in production mode using binaries from NPM of [OptiPNG][1] and [JPEGTran][2].
 * Supports [Sass][3], [LESS][4], and [Stylus][5] using respective stylesheet compilers.
 * JavaScript assets are mangled and minified using [UglifyJS][6].
 * Automatic detection of asset changes and will only upload changed assets to S3 in production mode.
@@ -79,21 +38,14 @@ a(class="fancybox", href="#{href}")
 * Uploads changed assets automatically and asynchronously to Amazon S3 (only in production mode) using [knox][10].
 
 
-## Add-on Modules (coming soon)
+## Add-on Modules
+
+These modules are a work in progress.
 
 * [express-cdn-cloudfront][13] - Amazon S3 and Amazon CloudFront
 * [express-cdn-maxcdn][14] - MaxCDN and Amazon S3
 * [express-cdn-cloudfiles][15] - Rackspace CloudFiles
 * [express-cdn-cloudflare][16] - CloudFlare and Amazon S3
-
-## Lazy Web Requests
-
-* Add options to pick CDN network (e.g. MaxCDN vs. Amazon vs. Rackspace)
-* Add tests for all asset types.
-* Modularization of `/lib/main.js` please!
-* Support Express 3.x.x+ and utilize async with view helper.
-* Convert from `fs.statSync` to `fs.stat` with callback for image assets modified timestamp hack.
-* Investigate why Chrome Tools Audit returns leverage proxy cookieless jargon.
 
 
 ## How does it work?
@@ -146,16 +98,11 @@ Assets are optimized, minified, mangled, gzipped, delivered by Amazon CloudFront
 7. After the DNS change propagates, you can test your new CDN by visiting <http://cdn.your-domain.com> (the `index.html` file should get displayed).
 
 
-## Installation
+## Quick Start
 
-### Install express-cdn module
 ```bash
 npm install express-cdn
 ```
-
-## Usage
-
-### Server
 
 ```js
 // # express-cdn
@@ -209,7 +156,7 @@ console.log("Server started: http://localhost:1337");
 app.listen(1337);
 ```
 
-### View Engine
+### Views
 
 #### Jade
 
@@ -336,9 +283,7 @@ timestamps together and checks if the combined asset timestamp on S3 exists!).
 ```
 
 
-## Optional Features
-
-### Using a custom logger
+## Custom Logging
 
 By default log messages will be sent to the console. If you would like to use a custom logger function you may pass it in as `options.logger`
 
@@ -378,7 +323,53 @@ app.configure(function() {
 app.dynamicHelpers({ CDN: CDN });
 
 ```
+
 Any output from express-cdn is now passed to `winston.info()` which writes to both `console` and `somefile.log`.
+
+
+## Lazyweb Requests
+
+These are feature requests that we would appreciate contributors for:
+
+* Add cache busting for CSS scraper
+* Add font CSS scraper for uploading fonts with proper mimetypes and cachebusting
+* Add options to pick CDN network (e.g. MaxCDN vs. Amazon vs. Rackspace)
+* Add tests for all asset types.
+* Modularization of `/lib/main.js` please!
+* Support Express 3.x.x+ and utilize async with view helper.
+* Convert from `fs.statSync` to `fs.stat` with callback for image assets modified timestamp hack.
+* Investigate why Chrome Tools Audit returns leverage proxy cookieless jargon.
+
+
+## Changelog
+
+* 0.1.0 - Fixed endpoint issue, fixed knox issue, added optipng binary, added jpegtran binary, **no longer requires optipng or jpegtran server dependencies!**
+
+* 0.0.9 - Allowed explicit setting of S3 endpoint (by @eladb)
+
+* 0.0.8 - Enabled string-only output for CDN assets.
+
+    ```jade
+    - var href = CDN('/img/full/foo.jpg', { raw : true });
+    a(class="fancybox", href="#{href}")
+      != CDN('/img/small/foo.jpg', { alt : 'Foo', width : 800, height : 600 })
+    ```
+
+* 0.0.7 - Removed CSS minification due to over-optimization of the `clean-css` module.
+
+* 0.0.6 - Added temporary support for CSS usage of `background-image`, `background`, and `contents` attributes by absolute image paths.
+
+    ```css
+    /* Valid - Proper way to write CSS with express-cdn */
+    #example-valid {
+      background: url(/something.png);
+    }
+
+    /* Invalid - Don't do this! */
+    #example-invalid {
+      background: url(../something.png);
+    }
+    ```
 
 
 ## Contributors
@@ -387,13 +378,23 @@ Any output from express-cdn is now passed to `winston.info()` which writes to bo
 * James Wyse <james@jameswyse.net>
 * Jon Keating <jon@licq.org>
 * Andrew de Andrade <andrew@deandrade.com.br>
-* <a href="http://www.joshisgross.com" target="_blank">Joshua Gross</a> <josh@spandex.io>
+* [Joshua Gross](http://www.joshisgross.com) <josh@spandex.io>
 * Dominik Lessel <info@rocketeleven.com>
 * Elad Ben-Israel <elad.benisrael@gmail.com>
 
+
 ## License
 
-MIT Licensed
+The MIT License
+
+Copyright (c) 2012- Nick Baugh niftylettuce@gmail.com (http://niftylettuce.com/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 
 [1]: http://optipng.sourceforge.net/
 [2]: http://jpegclub.org/jpegtran/
