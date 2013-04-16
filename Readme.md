@@ -334,6 +334,8 @@ Any output from express-cdn is now passed to `winston.info()` which writes to bo
 
 These are feature requests that we would appreciate contributors for:
 
+* Git SHA cachebusting instead of timestamp
+* Add support for multiple view directories
 * Add cache busting for CSS scraper
 * Add font CSS scraper for uploading fonts with proper mimetypes and cachebusting
 * Add options to pick CDN network (e.g. MaxCDN vs. Amazon vs. Rackspace)
