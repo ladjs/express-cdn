@@ -100,6 +100,22 @@ Assets are optimized, minified, mangled, gzipped, delivered by Amazon CloudFront
 6. Log in to your-domain.com's DNS manager, add a new CNAME "hostname" of `cdn`, and paste the contents of your clipboard as the the "alias" or "points to" value.
 7. After the DNS change propagates, you can test your new CDN by visiting <http://cdn.your-domain.com> (the `index.html` file should get displayed).
 
+**SSL Configuration**
+
+Some additional steps are required to enable SSL access of your assets by cloudfront.
+
+1. Visit <https://console.aws.amazon.com/s3/home> and open the bucket's properties.
+2. On the permissions tab, click the add bucket policy button.
+  * You can use the Policy Generator to generate the appropiate policy with this settings:
+      - Type: S3 Bucket Policy
+	  - Effect: Allow
+	  - Principal: AWS
+	  - AWS Service: Amazon S3
+	  - Actions: GetObject
+	  - ARN: arn:aws:s3:::<bucket_name>/* (fill in your bucket name)
+  * Click on generate policy and paste the output on the add bucket policy window.
+  * Save your changes.
+3. When you configure express-cdn you must reference cloudfront subdomain directly, since CNAMEs are not supported over ssl.
 
 ## Quick Start
 
