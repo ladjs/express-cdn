@@ -348,6 +348,8 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.1.1 - Add ability to specify template extension
+
 * 0.1.0 - Fixed endpoint issue, fixed knox issue, added optipng binary, added jpegtran binary, **no longer requires optipng or jpegtran server dependencies!**
 
 * 0.0.9 - Allowed explicit setting of S3 endpoint (by @eladb)
@@ -380,6 +382,7 @@ These are feature requests that we would appreciate contributors for:
 ## Contributors
 
 * Nick Baugh <niftylettuce@gmail.com>
+* Daniel Santiago
 * James Wyse <james@jameswyse.net>
 * Jon Keating <jon@licq.org>
 * Andrew de Andrade <andrew@deandrade.com.br>
