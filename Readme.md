@@ -364,6 +364,8 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.1.2 - Added protocol relative paths for HTTP/HTTPS via `//` (by @Nevtep)
+
 * 0.1.1 - Add ability to specify template extension
 
 * 0.1.0 - Fixed endpoint issue, fixed knox issue, added optipng binary, added jpegtran binary, **no longer requires optipng or jpegtran server dependencies!**
