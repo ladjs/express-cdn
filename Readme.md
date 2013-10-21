@@ -1,3 +1,4 @@
+[![Gittip](http://badgr.co/gittip/niftylettuce.png)](https://www.gittip.com/niftylettuce/)
 
 # express-cdn <sup>[![Version Badge](http://vb.teelaun.ch/niftylettuce/express-cdn.svg#0.1.0)](https://npmjs.org/package/express-cdn)</sup>
 
