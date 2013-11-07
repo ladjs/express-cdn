@@ -365,6 +365,8 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.1.5 - Preserved license comments with UglifyJS version 2.0 (by @mateusz-)
+
 * 0.1.4 - Added case insensitive usage of `cdn` or `CDN` (by @leostera)
 
 * 0.1.3 - Explicity set `x-amz-acl` to `public-read`.
