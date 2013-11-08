@@ -365,6 +365,8 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.1.6 - Fixed extracting CSS border-image resources and image snot followed by `;` in CSS (by @lxe)
+
 * 0.1.5 - Preserved license comments with UglifyJS version 2.0 (by @mateusz-)
 
 * 0.1.4 - Added case insensitive usage of `cdn` or `CDN` (by @leostera)
@@ -414,6 +416,7 @@ These are feature requests that we would appreciate contributors for:
 * [Joshua Gross](http://www.joshisgross.com) <josh@spandex.io>
 * Dominik Lessel <info@rocketeleven.com>
 * Elad Ben-Israel <elad.benisrael@gmail.com>
+* Aleksey Smolenchuk <lxe@lxe.co>
 
 
 ## License
