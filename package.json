@@ -94,8 +94,8 @@
     "async": "~0.2.9",
     "uglify-js": "~2.4.3",
     "optipng-bin": "~0.3",
-    "jpegtran-bin": "~0.1.4",
-    "knox": "~0.8.0",
+    "jpegtran-bin": "~0.2.1",
+    "knox": "~0.8.7",
     "request": "~2.16.6",
     "underscore.string": "~2.3.1"
   },
