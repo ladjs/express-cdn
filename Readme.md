@@ -365,6 +365,8 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.1.7 - Fixed issue with knox (by @DServy)
+
 * 0.1.6 - Fixed extracting CSS border-image resources and image snot followed by `;` in CSS (by @lxe)
 
 * 0.1.5 - Preserved license comments with UglifyJS version 2.0 (by @mateusz-)
