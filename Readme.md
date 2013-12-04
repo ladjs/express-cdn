@@ -204,6 +204,9 @@ app.listen(1337);
 
 // #8 - Load and concat two stylesheets
 != CDN([ '/css/style.css', '/css/extra.css' ])
+
+// #9 - Load a favicon
+!= CDN('/img/favicon.ico')
 ```
 
 #### EJS
@@ -232,6 +235,9 @@ app.listen(1337);
 
 <!-- #8 - Load and concat two stylesheets -->
 <%- CDN([ '/css/style.css', '/css/extra.css' ]) %>
+
+<!-- #9 - Load a favicon -->
+<%- CDN('/img/favicon.ico') %>
 ```
 
 ### Automatically Rendered HTML
@@ -265,6 +271,9 @@ app.listen(1337);
 <!-- #8 - Load and concat two stylesheets -->
 <link href="/css/style.css?v=1341214029" rel="stylesheet" type="text/css" />
 <link href="/css/extra.css?v=1341214029" rel="stylesheet" type="text/css" />
+
+<!-- #9 - Load a favicon -->
+<link href="/img/favicon.ico?v=1341214029" rel="shortcut icon" />
 ```
 
 #### Production Mode
@@ -300,6 +309,9 @@ timestamps together and checks if the combined asset timestamp on S3 exists!).
 
 <!-- #8 - Load and concat two stylesheets -->
 <link href="https://cdn.your-site.com/style%2Bextra.1341382571.css" rel="stylesheet" type="text/css" />
+
+<!-- #9 - Load a favicon -->
+<link href="https://cdn.your-site.com/img/favicon.1341382571.ico" rel="shortcut icon" />
 ```
 
 
