@@ -90,7 +90,7 @@ Assets are optimized, minified, mangled, gzipped, delivered by Amazon CloudFront
       - Origin: `S3-bucket-name`
       - Viewer Protocol Policy: `HTTP and HTTPS`
       - Object Caching: `Use Origin Cache Headers`
-      - Forward Query String: `No (Improves Caching)`
+      - Forward Query String: **Yes** `(Improves Caching)`
   * Distribution details:
       - Alternate Domain Names (CNAMEs): `cdn.your-domain.com`
       - Default Root Object: `index.html`
