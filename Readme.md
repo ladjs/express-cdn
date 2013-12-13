@@ -377,6 +377,8 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.1.9 - Added cleanCSS support to minify CSS (by @DServy)
+
 * 0.1.8 - Added favicon support (by @mateusz-)
 
 * 0.1.7 - Fixed issue with knox (by @DServy)
@@ -433,7 +435,7 @@ These are feature requests that we would appreciate contributors for:
 * Dominik Lessel <info@rocketeleven.com>
 * Elad Ben-Israel <elad.benisrael@gmail.com>
 * Aleksey Smolenchuk <lxe@lxe.co>
-
+* David Staley <Dstaley234@gmail.com>
 
 ## License
 
