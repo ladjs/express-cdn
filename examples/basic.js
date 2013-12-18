@@ -28,6 +28,7 @@ var CDN = require('../')(app, options);
 app.configure(function() {
   app.set('view engine', 'jade');
   app.set('view options', { layout: false, pretty: true });
+  app.set('views', path.join(__dirname, 'views'));
   app.enable('view cache');
   app.use(express.bodyParser());
   app.use(express.static(path.join(__dirname, 'public')));
