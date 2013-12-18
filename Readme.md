@@ -377,6 +377,8 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.2.0 - Support for CSS @media query attribute with parenthesis (by @jfred)
+
 * 0.1.9 - Added cleanCSS support to minify CSS (by @DServy)
 
 * 0.1.8 - Added favicon support (by @mateusz-)
@@ -436,6 +438,7 @@ These are feature requests that we would appreciate contributors for:
 * Elad Ben-Israel <elad.benisrael@gmail.com>
 * Aleksey Smolenchuk <lxe@lxe.co>
 * David Staley <Dstaley234@gmail.com>
+* Joshua Frederick <josh@jfred.net>
 
 ## License
 
