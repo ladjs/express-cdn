@@ -1,11 +1,8 @@
-[![Gittip](http://badgr.co/gittip/niftylettuce.png)](https://www.gittip.com/niftylettuce/)
-
-# express-cdn <sup>[![Version Badge](http://vb.teelaun.ch/niftylettuce/express-cdn.svg#0.1.0)](https://npmjs.org/package/express-cdn)</sup>
+# express-cdn [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/niftylettuce/express-cdn/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![NPM version](https://badge.fury.io/js/express-cdn.png)](http://badge.fury.io/js/express-cdn) [![Gittip](http://img.shields.io/gittip/niftylettuce.png)](https://www.gittip.com/niftylettuce/)
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
-View these docs generated with [readme-docs](https://github.com/getprove/node-bootstrap-readme-docs) here:
-<http://niftylettuce.github.io/express-cdn>
+View documentation here <http://documentup.com/niftylettuce/express-cdn>.
 
 Follow [@niftylettuce](http://twitter.com/niftylettuce) on Twitter for updates.
 
