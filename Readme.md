@@ -435,6 +435,7 @@ These are feature requests that we would appreciate contributors for:
 * Aleksey Smolenchuk <lxe@lxe.co>
 * David Staley <Dstaley234@gmail.com>
 * Joshua Frederick <josh@jfred.net>
+* Rodion <i6@bk.ru>
 
 ## License
 
