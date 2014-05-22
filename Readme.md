@@ -373,6 +373,10 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.2.2 - Fixed uglifyjs license comment regex (by @kudos), fixed wrong mimetypes for minify case in compile method (by @kaskovsky)
+
+* 0.2.1 - Fixed cursor css property also can be url (by @sars)
+
 * 0.2.0 - Support for CSS @media query attribute with parenthesis (by @jfred)
 
 * 0.1.9 - Added cleanCSS support to minify CSS (by @DServy)
