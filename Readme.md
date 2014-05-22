@@ -436,6 +436,8 @@ These are feature requests that we would appreciate contributors for:
 * David Staley <Dstaley234@gmail.com>
 * Joshua Frederick <josh@jfred.net>
 * Rodion <i6@bk.ru>
+* kaskovsky
+* [Jonathan Cremin](http://crem.in)
 
 ## License
 
