@@ -113,10 +113,10 @@
     "uglify-js": "~2.4.3",
     "optipng-bin": "~0.3",
     "jpegtran-bin": "~0.2.1",
-    "knox": "~0.8.7",
+    "knox": "~0.9.0",
     "request": "~2.16.6",
     "underscore.string": "~2.3.1",
-    "clean-css":"2.0.2"
+    "clean-css": "2.0.2"
   },
   "readmeFilename": "Readme.md"
 }
