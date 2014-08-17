@@ -2,8 +2,6 @@
 
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
-View documentation here <http://documentup.com/niftylettuce/express-cdn>.
-
 Follow [@niftylettuce](http://twitter.com/niftylettuce) on Twitter for updates.
 
 Like this module?  Check out [node-email-templates](https://github.com/niftylettuce/node-email-templates)!
