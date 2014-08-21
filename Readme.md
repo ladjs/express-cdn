@@ -371,6 +371,8 @@ These are feature requests that we would appreciate contributors for:
 
 ## Changelog
 
+* 0.2.3 - Added support for SVG files (by @zhangchiqing)
+
 * 0.2.2 - Fixed uglifyjs license comment regex (by @kudos), fixed wrong mimetypes for minify case in compile method (by @kaskovsky)
 
 * 0.2.1 - Fixed cursor css property also can be url (by @sars)
@@ -440,6 +442,7 @@ These are feature requests that we would appreciate contributors for:
 * Rodion <i6@bk.ru>
 * kaskovsky
 * [Jonathan Cremin](http://crem.in)
+* Leo Zhang <zhangchiqing@gmail.com>
 
 ## License
 

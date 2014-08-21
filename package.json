@@ -1,7 +1,7 @@
 {
   "name": "express-cdn",
   "description": "Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express using S3 and CloudFront.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": {
     "name": "Nick Baugh",
     "email": "niftylettuce@gmail.com"
@@ -63,6 +63,10 @@
     },
     {
       "name": "Jonathan Cremin"
+    },
+    {
+      "name": "Leo Zhang",
+      "email": "zhangchiqing@gmail.com"
     }
   ],
   "keywords": [
