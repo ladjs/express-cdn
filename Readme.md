@@ -39,7 +39,7 @@ Like this module?  Check out [node-email-templates](https://github.com/niftylett
 
 ## Add-on Modules
 
-These modules are a work in progress.
+These modules are a **not currently a work in progress**, see [#70](https://github.com/niftylettuce/express-cdn/issues/70).
 
 * [express-cdn-cloudfront][13] - Amazon S3 and Amazon CloudFront
 * [express-cdn-maxcdn][14] - MaxCDN and Amazon S3
