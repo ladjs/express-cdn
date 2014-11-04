@@ -443,6 +443,7 @@ These are feature requests that we would appreciate contributors for:
 * kaskovsky
 * [Jonathan Cremin](http://crem.in)
 * Leo Zhang <zhangchiqing@gmail.com>
+* Herman-Scheer <g@herman-scheer.com>
 
 ## License
 
