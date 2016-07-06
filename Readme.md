@@ -156,7 +156,9 @@ app.configure(function() {
 });
 
 // Add the view helper
-if (semver.gte(express.version, '3.0.0'))
+if (semver.gte(express.version, '4.0.0'))
+  app.locals.CDN = CDN();
+else if (semver.gte(express.version, '3.0.0'))
   app.locals({ CDN: CDN() });
 else
   app.dynamicHelpers({ CDN: CDN });
