@@ -109,7 +109,7 @@
     "knox": "~0.9.2",
     "walk": "~2.2.1",
     "async": "~0.2.9",
-    "request": "~2.16.6",
+    "request": "~2.74.0",
     "uglify-js": "~2.4.3",
     "underscore.string": "~2.3.1"
   },
@@ -122,7 +122,7 @@
     "optipng-bin": "3.1.2",
     "jpegtran-bin": "~3.0.6",
     "knox": "~0.9.2",
-    "request": "~2.16.6",
+    "request": "~2.74.0",
     "underscore.string": "~2.3.1",
     "clean-css":"2.0.2"
   },
