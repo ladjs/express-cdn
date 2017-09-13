@@ -1,5 +1,7 @@
 # express-cdn [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/niftylettuce/express-cdn/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![NPM version](https://badge.fury.io/js/express-cdn.png)](http://badge.fury.io/js/express-cdn) [![Gittip](http://img.shields.io/gittip/niftylettuce.png)](https://www.gittip.com/niftylettuce/)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/niftylettuce/express-cdn.svg)](https://greenkeeper.io/)
+
 Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
 
 Follow [@niftylettuce](http://twitter.com/niftylettuce) on Twitter for updates.
