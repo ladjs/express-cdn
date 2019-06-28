@@ -9,24 +9,17 @@ Like this module?  Check out [node-email-templates](https://github.com/niftylett
 
 ## Index
 
-- [express-cdn ![Bitdeli Badge](https://bitdeli.com/free "Bitdeli Badge") ![NPM version](http://badge.fury.io/js/express-cdn) ![Gittip](https://www.gittip.com/niftylettuce/)](#express-cdn-Bitdeli-Badgehttpsbitdelicomfree-%22Bitdeli-Badge%22-NPM-versionhttpbadgefuryiojsexpress-cdn-Gittiphttpswwwgittipcomniftylettuce)
-  - [Features](#Features)
-  - [Add-on Modules](#Add-on-Modules)
-  - [How does it work?](#How-does-it-work)
-  - [Environment Differences](#Environment-Differences)
-  - [CDN Setup Instructions](#CDN-Setup-Instructions)
-  - [Quick Start](#Quick-Start)
-    - [Views](#Views)
-      - [Jade](#Jade)
-      - [EJS](#EJS)
-    - [Automatically Rendered HTML](#Automatically-Rendered-HTML)
-      - [Development Mode](#Development-Mode)
-      - [Production Mode](#Production-Mode)
-  - [Custom Logging](#Custom-Logging)
-  - [Lazyweb Requests](#Lazyweb-Requests)
-  - [Changelog](#Changelog)
-  - [Contributors](#Contributors)
-  - [License](#License)
+- [Features](#features)
+- [Add-On Modules](#add-on-modules)
+- [How Does It Work?](#how-does-it-work)
+- [Environment Differences](#environment-differences)
+- [CDN Setup Instructions](#cdn-setup-instructions)
+- [Quick Start](#quick-start)
+- [Custom Logging](#custom-logging)
+- [Lazyweb Requests](#lazyweb-requests)
+- [Changelog](#changelog)
+- [Contributors](#contributors)
+- [License](#license)
 
 
 ## Features
@@ -111,11 +104,11 @@ Some additional steps are required to enable SSL access of your assets by cloudf
 2. On the permissions tab, click the add bucket policy button.
   * You can use the Policy Generator to generate the appropiate policy with this settings:
       - Type: S3 Bucket Policy
-	  - Effect: Allow
-	  - Principal: AWS
-	  - AWS Service: Amazon S3
-	  - Actions: GetObject
-	  - ARN: arn:aws:s3:::<bucket_name>/* (fill in your bucket name)
+    - Effect: Allow
+    - Principal: AWS
+    - AWS Service: Amazon S3
+    - Actions: GetObject
+    - ARN: arn:aws:s3:::<bucket_name>/* (fill in your bucket name)
   * Click on generate policy and paste the output on the add bucket policy window.
   * Save your changes.
 3. When you configure express-cdn you must reference cloudfront subdomain directly, since CNAMEs are not supported over ssl.
