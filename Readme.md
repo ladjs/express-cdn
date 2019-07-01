@@ -184,7 +184,7 @@ app.listen(1337);
 != CDN('/img/sprite.png', { alt: 'Sprite' })
 
 // #3 - Load an image with a custom tag attribute and data-src attribute instead src
-!= CDN('/img/sprite.png', { alt: 'Sprite', 'data-lazy': true })
+!= CDN('/img/sprite.png', { alt: 'Sprite', 'data-src': true })
 
 // #4 - Load a script
 != CDN('/js/script.js')
@@ -218,7 +218,7 @@ app.listen(1337);
 <%- CDN('/img/sprite.png', { alt: 'Sprite' }) %>
 
 <!-- #3 - Load an image with a custom tag attribute and data-src attribute instead src -->
-<%- CDN('/img/sprite.png', { alt: 'Sprite', 'data-lazy': true }) %>
+<%- CDN('/img/sprite.png', { alt: 'Sprite', 'data-src': true }) %>
 
 <!-- #4 - Load a script -->
 <%- CDN('/js/script.js') %>
@@ -254,7 +254,7 @@ app.listen(1337);
 <img src="/img/sprite.png?v=1341214029" alt="Sprite" />
 
 <!-- #3 - Load an image with a custom tag attribute and data-src attribute instead src -->
-<img data-src="/img/sprite.png?v=1341214029" alt="Sprite" data-lazy="true" />
+<img data-src="/img/sprite.png?v=1341214029" alt="Sprite" data-src="true" />
 
 <!-- #4 - Load a script -->
 <script src="/js/script.js?v=1341214029" type="text/javascript"></script>
@@ -298,7 +298,7 @@ timestamps together and checks if the combined asset timestamp on S3 exists!).
 <img src="https://cdn.your-site.com/img/sprite.1341382571.png" alt="Sprite" />
 
 <!-- #3 - Load an image with a custom tag attribute -->
-<img data-src="https://cdn.your-site.com/img/sprite.1341382571.png" alt="Sprite" data-lazy="true" />
+<img data-src="https://cdn.your-site.com/img/sprite.1341382571.png" alt="Sprite" data-src="true" />
 
 <!-- #4 - Load a script -->
 <script src="https://cdn.your-site.com/js/script.1341382571.js" type="text/javascript"></script>
