@@ -1,7 +1,7 @@
 {
   "name": "express-cdn",
   "description": "Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express using S3 and CloudFront.",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "author": {
     "name": "Nick Baugh",
     "email": "niftylettuce@gmail.com"
@@ -101,17 +101,17 @@
   },
   "main": "lib/main.js",
   "devDependencies": {
-    "express": "~4.16.3",
-    "ejs": "~2.6.1",
-    "jade": "~1.11.0",
-    "mime": "~2.3.1",
-    "underscore": "~1.9.0",
-    "knox": "~0.9.2",
-    "walk": "~2.3.13",
     "async": "~2.6.1",
+    "ejs": "~2.6.1",
+    "express": "~4.16.3",
+    "jade": "~1.11.0",
+    "knox": "~0.9.2",
+    "mime": "~2.3.1",
     "request": "~2.87.0",
     "uglify-js": "~3.3.28",
-    "underscore.string": "~3.3.4"
+    "underscore": "~1.9.0",
+    "underscore.string": "~3.3.4",
+    "walk": "~2.3.13"
   },
   "dependencies": {
     "async": "~2.6.1",
