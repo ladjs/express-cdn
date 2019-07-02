@@ -104,11 +104,11 @@ Some additional steps are required to enable SSL access of your assets by cloudf
 2. On the permissions tab, click the add bucket policy button.
   * You can use the Policy Generator to generate the appropiate policy with this settings:
       - Type: S3 Bucket Policy
-	  - Effect: Allow
-	  - Principal: AWS
-	  - AWS Service: Amazon S3
-	  - Actions: GetObject
-	  - ARN: arn:aws:s3:::<bucket_name>/* (fill in your bucket name)
+    - Effect: Allow
+    - Principal: AWS
+    - AWS Service: Amazon S3
+    - Actions: GetObject
+    - ARN: arn:aws:s3:::<bucket_name>/* (fill in your bucket name)
   * Click on generate policy and paste the output on the add bucket policy window.
   * Save your changes.
 3. When you configure express-cdn you must reference cloudfront subdomain directly, since CNAMEs are not supported over ssl.
@@ -183,25 +183,28 @@ app.listen(1337);
 // #2 - Load an image with a custom tag attribute
 != CDN('/img/sprite.png', { alt: 'Sprite' })
 
-// #3 - Load a script
+// #3 - Load an image with a custom tag attribute and data-src attribute instead src
+!= CDN('/img/sprite.png', { alt: 'Sprite', 'data-src': true })
+
+// #4 - Load a script
 != CDN('/js/script.js')
 
-// #4 - Load a script with a custom tag attribute
+// #5 - Load a script with a custom tag attribute
 != CDN('/js/script.js', { 'data-message': 'Hello' })
 
-// #5 - Load and concat two scripts
+// #6 - Load and concat two scripts
 != CDN([ '/js/plugins.js', '/js/script.js' ])
 
-// #6 - Load and concat two scripts with custom tag attributes
+// #7 - Load and concat two scripts with custom tag attributes
 != CDN([ '/js/plugins.js', '/js/script.js' ], { 'data-message': 'Hello' })
 
-// #7 - Load a stylesheet
+// #8 - Load a stylesheet
 != CDN('/css/style.css')
 
-// #8 - Load and concat two stylesheets
+// #9 - Load and concat two stylesheets
 != CDN([ '/css/style.css', '/css/extra.css' ])
 
-// #9 - Load a favicon
+// #10 - Load a favicon
 != CDN('/img/favicon.ico')
 ```
 
@@ -214,25 +217,28 @@ app.listen(1337);
 <!-- #2 - Load an image with a custom tag attribute -->
 <%- CDN('/img/sprite.png', { alt: 'Sprite' }) %>
 
-<!-- #3 - Load a script -->
+<!-- #3 - Load an image with a custom tag attribute and data-src attribute instead src -->
+<%- CDN('/img/sprite.png', { alt: 'Sprite', 'data-src': true }) %>
+
+<!-- #4 - Load a script -->
 <%- CDN('/js/script.js') %>
 
-<!-- #4 - Load a script with a custom tag attribute -->
+<!-- #5 - Load a script with a custom tag attribute -->
 <%- CDN('/js/script.js', { 'data-message': 'Hello' }) %>
 
-<!-- #5 - Load and concat two scripts -->
+<!-- #6 - Load and concat two scripts -->
 <%- CDN([ '/js/plugins.js', '/js/script.js' ]) %>
 
-<!-- #6 - Load and concat two scripts with custom tag attributes -->
+<!-- #7 - Load and concat two scripts with custom tag attributes -->
 <%- CDN([ '/js/plugins.js', '/js/script.js' ], { 'data-message': 'Hello' }) %>
 
-<!-- #7 - Load a stylesheet -->
+<!-- #8 - Load a stylesheet -->
 <%- CDN('/css/style.css') %>
 
-<!-- #8 - Load and concat two stylesheets -->
+<!-- #9 - Load and concat two stylesheets -->
 <%- CDN([ '/css/style.css', '/css/extra.css' ]) %>
 
-<!-- #9 - Load a favicon -->
+<!-- #10 - Load a favicon -->
 <%- CDN('/img/favicon.ico') %>
 ```
 
@@ -247,28 +253,31 @@ app.listen(1337);
 <!-- #2 - Load an image with a custom tag attribute -->
 <img src="/img/sprite.png?v=1341214029" alt="Sprite" />
 
-<!-- #3 - Load a script -->
+<!-- #3 - Load an image with a custom tag attribute and data-src attribute instead src -->
+<img data-src="/img/sprite.png?v=1341214029" alt="Sprite" data-src="true" />
+
+<!-- #4 - Load a script -->
 <script src="/js/script.js?v=1341214029" type="text/javascript"></script>
 
-<!-- #4 - Load a script with a custom tag attribute -->
+<!-- #5 - Load a script with a custom tag attribute -->
 <script src="/js/script.js?v=1341214029" type="text/javascript" data-message="Hello"></script>
 
-<!-- #5 - Load and concat two scripts -->
+<!-- #6 - Load and concat two scripts -->
 <script src="/js/plugins.js?v=1341214029" type="text/javascript"></script>
 <script src="/js/script.js?v=1341214029" type="text/javascript"></script>
 
-<!-- #6 - Load and concat two scripts with custom tag attributes -->
+<!-- #7 - Load and concat two scripts with custom tag attributes -->
 <script src="/js/plugins.js?v=1341214029" type="text/javascript" data-message="Hello"></script>
 <script src="/js/script.js?v=1341214029" type="text/javascript" data-message="Hello"></script>
 
-<!-- #7 - Load a stylesheet -->
+<!-- #8 - Load a stylesheet -->
 <link href="/css/style.css?v=1341214029" rel="stylesheet" type="text/css" />
 
-<!-- #8 - Load and concat two stylesheets -->
+<!-- #9 - Load and concat two stylesheets -->
 <link href="/css/style.css?v=1341214029" rel="stylesheet" type="text/css" />
 <link href="/css/extra.css?v=1341214029" rel="stylesheet" type="text/css" />
 
-<!-- #9 - Load a favicon -->
+<!-- #10 - Load a favicon -->
 <link href="/img/favicon.ico?v=1341214029" rel="shortcut icon" />
 ```
 
@@ -288,25 +297,28 @@ timestamps together and checks if the combined asset timestamp on S3 exists!).
 <!-- #2 - Load an image with a custom tag attribute -->
 <img src="https://cdn.your-site.com/img/sprite.1341382571.png" alt="Sprite" />
 
-<!-- #3 - Load a script -->
+<!-- #3 - Load an image with a custom tag attribute -->
+<img data-src="https://cdn.your-site.com/img/sprite.1341382571.png" alt="Sprite" data-src="true" />
+
+<!-- #4 - Load a script -->
 <script src="https://cdn.your-site.com/js/script.1341382571.js" type="text/javascript"></script>
 
-<!-- #4 - Load a script with a custom tag attribute -->
+<!-- #5 - Load a script with a custom tag attribute -->
 <script src="https://cdn.your-site.com/js/script.1341382571.js" type="text/javascript" data-message="Hello"></script>
 
-<!-- #5 - Load and concat two scripts -->
+<!-- #6 - Load and concat two scripts -->
 <script src="https://cdn.your-site.com/plugins%2Bscript.1341382571.js" type="text/javascript"></script>
 
-<!-- #6 - Load and concat two scripts with custom tag attributes -->
+<!-- #7 - Load and concat two scripts with custom tag attributes -->
 <script src="https://cdn.your-site.com/plugins%2Bscript.1341382571.js" type="text/javascript" data-message="Hello"></script>
 
-<!-- #7 - Load a stylesheet -->
+<!-- #8 - Load a stylesheet -->
 <link href="https://cdn.your-site.com/css/style.1341382571.css" rel="stylesheet" type="text/css" />
 
-<!-- #8 - Load and concat two stylesheets -->
+<!-- #9 - Load and concat two stylesheets -->
 <link href="https://cdn.your-site.com/style%2Bextra.1341382571.css" rel="stylesheet" type="text/css" />
 
-<!-- #9 - Load a favicon -->
+<!-- #10 - Load a favicon -->
 <link href="https://cdn.your-site.com/img/favicon.1341382571.ico" rel="shortcut icon" />
 ```
 
